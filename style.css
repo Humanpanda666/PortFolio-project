@@ -1,0 +1,286 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");
+
+/* LOADER */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #333;
+  color: white;
+}
+.navbar {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  box-shadow: 0px 3px 17px -2px rgba(0, 0, 0, 0.17);
+  -webkit-box-shadow: 0px 3px 17px -2px rgba(0, 0, 0, 0.17);
+  -moz-box-shadow: 0px 3px 17px -2px rgba(0, 0, 0, 0.17);
+  padding: 10px 10%;
+}
+
+.brand-title {
+  font-size: 1.5rem;
+  margin: 0.5rem;
+}
+
+.navbar-links {
+  height: 100%;
+}
+
+.navbar-links ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li {
+  list-style: none;
+}
+
+.navbar-links li a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.navbar-links li:hover {
+  background-color: #555;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+body {
+  background: #333;
+  font-family: "JetBrains Mono", monospace;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 1.5rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: #00ff41;
+  border-radius: 10px;
+}
+.preloader {
+  align-items: center;
+  background: rgb(23, 22, 22);
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  top: 0;
+  transition: opacity 0.3s linear;
+  width: 100%;
+  z-index: 9999;
+}
+
+/*
+  /*
+  /*
+  /*
+
+  
+/* DEMO-SPECIFIC STYLES */
+.typewriter-div {
+  justify-content: center;
+  display: flex;
+  text-align: left;
+  /* border: 1px red solid; */
+}
+
+.inlineTest {
+  display: inline-block;
+}
+
+/* Opacity */
+/*
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+*/
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-right: 0.15em solid #00ff41;
+  }
+  50% {
+    border-color: rgb(44, 201, 62);
+    border-color: transparent;
+    border: none;
+  }
+}
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  /*border: 1px red solid; */
+  text-align: center;
+  margin-top: 10%;
+}
+
+/* ANIMATIONS ON SCROLL */
+
+/* BUTTON */
+
+.newTypewriter {
+  border-right: 0.15em solid #00ff41;
+  animation: blink-caret 0.5s step-end infinite;
+}
+
+.newTypewriterEnd {
+  border: none;
+  animation: blink-caret 0.5s step-end 6;
+}
+/* HOVER UNDERLINE */
+.hover {
+  display: inline-block;
+  position: relative;
+  color: #0087ca;
+}
+
+.hover:after {
+  content: "";
+  position: absolute;
+  width: 70%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 15%;
+  background-color: #00ff41;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.btn {
+  background-color: #00ff41;
+  padding: 0.75rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-family: "JetBrains Mono", monospace;
+  font-weight: bold;
+  transition: 0.3s ease-in;
+  border: 1px solid #00ff41;
+}
+.btn:hover {
+  color: #00ff41;
+  background-color: #333;
+  border: 1px solid #00ff41;
+}
+
+.section {
+  padding: 10% 25%;
+}
+.greenText {
+  color: #00ff41;
+}
+h1 {
+  padding-bottom: 0.25rem;
+}
+h2 {
+  padding-bottom: 1rem;
+  color: #d8d8d8;
+}
+@media (max-width: 800px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .toggle-button {
+    display: flex;
+  }
+
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .navbar-links ul li {
+    text-align: center;
+  }
+
+  .navbar-links ul li a {
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+  .btn {
+    display: none;
+  }
+  .hover:after {
+    content: "";
+    position: absolute;
+    width: 20%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 40%;
+    background-color: #00ff41;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+}
